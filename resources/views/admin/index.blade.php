@@ -11,6 +11,7 @@
             <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-10">Тайлбар</th>
             <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-10">Created at</th>
             <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-10">Updated at</th>
+            <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-10">Updated at</th>
         </tr>
         </thead>
         <tbody>
@@ -23,6 +24,11 @@
                 <td>{{ $item->description }}</td>
                 <td>{{ $item->created_at }}</td>
                 <td>{{ $item->updated_at }}</td>
+                <td>
+                    <a href="{{ route('edit', $item->id) }}" class="btn-danger">
+                        EDIT
+                    </a>
+                </td>
             </tr>
         @endforeach
         </tbody>
